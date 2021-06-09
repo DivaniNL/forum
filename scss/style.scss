@@ -1,0 +1,127 @@
+@import "base";
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+
+body{
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  header{
+    height: 100px;
+    width: 100%;
+    nav{
+      width: 100%;
+      height: 70px;
+      .logo{
+        float: left;
+        margin-left: 3%;
+      }
+      a{
+        text-decoration: none;
+      }
+      h1{
+        margin: 0;
+        padding: 0;
+        font-size: 40px;
+        line-height: 70px;
+        margin-left: 2%;
+        color: $basecolor1;
+      }
+      #settings{
+        color: $basecolor1;
+        line-height: 70px;
+        margin-right: 3%;
+        font-size: 40px;
+        float: right;
+      }
+      form{
+        line-height: 70px;
+        input{
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+  main{
+    width: 100%;
+    height: auto;
+    .welkomBlok{
+      width: 80%;
+      height: auto;
+      margin-left: 10%;
+      text-align: center;
+      }
+      #tekst2{
+        margin-top: -40px;
+      }
+      #bttn2{
+        width: 20%;
+      }
+    }
+    #verkeerd{
+      text-align: center;
+      font-size: 20px;
+    }
+    form{
+      text-align: center;
+      color: $basecolor1;
+      font-size: 25px;
+      label{
+        font-size: 33px;
+      }
+      input{
+        font-size: 20px;
+        width: 27%;
+        height: 33px;
+        border: 1px solid $basecolor1;
+      }
+      .bttn{
+        background-color: $basecolor2;
+        border: none;
+        font-size: 20px;
+        height: 50px;
+        border-radius: 10px;
+        width: 27%;
+        color: $basecolor1;
+      }
+      .bttn:hover{
+        background-color: white;
+        border: 2px solid $basecolor2;
+        transition: 0.5s;
+        cursor: pointer;
+      }
+  }
+}
+
+@media (max-width: 900px){
+
+body{
+  header{
+    nav{
+      h1{
+        margin-left: 0%;
+        text-align: center;
+        margin-top: 30px;
+        font-size: 55px;
+      }
+    }
+  }
+  main{
+    form{
+      input{
+        width: 80%;
+      }
+      .bttn{
+        width: 80%;
+        height: 60px;
+      }
+      #bttn2{
+        width: 80%;
+        height: 60px;
+        margin-bottom: 50px;
+      }
+
+    }
+  }
+}
+}
