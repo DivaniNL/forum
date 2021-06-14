@@ -17,7 +17,6 @@ if (isset($_SESSION['login'])) {
      <script src="https://kit.fontawesome.com/6d3b4f3309.js" crossorigin="anonymous"></script>
      <meta charset="utf-8">
      <link rel="stylesheet" href="css/home.min.css">
-     <script src="https://kit.fontawesome.com/55c7e8bc98.js" crossorigin="anonymous"></script>
      <title>Home - Forum</title>
    </head>
    <body>
@@ -36,18 +35,34 @@ if (isset($_SESSION['login'])) {
        </div>
        <div class="mijn_posts">
          <h2>Mijn Posts</h2>
+         <?php
+         $gebruiker = $_SESSION['login'];
+          $sql="SELECT * from berichten WHERE gebruikersnaam = '$gebruiker' ORDER BY datum DESC ";
+         $result = $conn->query($sql);
+          if ($result->num_rows > 0) {
+
+          while($row = $result->fetch_assoc()) {
+            echo "<div class='bericht'>";
+            echo "<p1>" .$row["gebruikersnaam"]. "</p1>";
+            echo "<p>" .$row["tekst"]. "</p>";
+            echo "<p2> Geplaatst op: " .$row["datum"]. "</p2><br>";
+            echo "<a href='forum.php?id=".$row['id']."''><p2>Bekijk Bericht<p2></a>";
+            echo "</div>";
+          }
+      }
+          ?>
        </div>
        <div id="nieuwe_onderwerpen" class="block">
          <h2>Nieuwe Onderwerpen</h2>
          <?php
-         $sql="SELECT onderwerp from onderwerpen";
+         $sql="SELECT * from onderwerpen ORDER BY datum DESC";
 
          $result = $conn->query($sql);
           if ($result->num_rows > 0) {
 
           while($row = $result->fetch_assoc()) {
             echo "<div class='onderwerp'>";
-            echo "<a href='forum.php'><div class='text'>" .$row['onderwerp']."</div></a>";
+            echo "<a href='forum.php?id=".$row['id']."''><div class='text'>" .$row['onderwerp']."</div></a>";
             echo "</div>";
           }
       }

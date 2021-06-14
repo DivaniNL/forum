@@ -1,0 +1,110 @@
+@import "base";
+@import "style";
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+
+body{
+  margin: 0;
+  padding: 0;
+  main{
+    h1{
+      text-align: center;
+      color: $basecolor2;
+      font-size: 40px;
+      margin-top: 0px;
+    }
+    h2{
+      color: $basecolor2;
+      font-size: 30px;
+      text-align: center;
+    }
+    h5{
+      text-align: center;
+      font-size: 20px;
+      margin-top: -30px;
+      color: $basecolor1;
+      margin-bottom: 28px;
+    }
+    .posts{
+      overflow-y: auto;
+      width: 60%;
+      height: 75vh;
+      float: left;
+      margin-left: 1.6%;
+      border: 2px solid $basecolor1;
+      border-radius: 10px;
+      margin-right: 1.6%;
+      .bericht{
+        border-radius: 10px;
+        width: 95%;
+        border: 2px solid black;
+        margin-bottom: 2%;
+        margin-left: 2.5%;
+        min-height: 10vh;
+        p{
+          padding-left: 15px;
+          font-size: 22px;
+          margin-top: 5px;
+        }
+        p1{
+          color: $basecolor2;
+          padding-left: 15px;
+          font-size: 23px;
+        }
+        p2{
+          margin-left: 15px;
+        }
+        .img{
+          width: 15%;
+          height: 100%;
+          float: left;
+        }
+      }
+    }
+    .maak_posts{
+      width: 35%;
+      height: 75vh;
+      border: 2px solid $basecolor1;
+      border-radius: 10px;
+      float: left;
+      .put{
+        width: 80%;
+        height: 50px;
+      }
+      #put1{
+        height: 150px;
+      }
+      #put2{
+        background-color: $basecolor1;
+        color: white;
+        border: 2px solid $basecolor1;
+        border-radius: 10px;
+      }
+      #put2:hover{
+        background-color: white;
+        color: $basecolor1;
+        cursor: pointer;
+        transition: 0.5s;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 1000px){
+  body{
+    main{
+      .posts{
+        float: none;
+        width: 95%;
+        margin-left: 2.5%;
+        margin-bottom: 2.5%;
+      }
+      .maak_posts{
+        float: none;
+        width: 95%;
+        margin-left: 2.5%;
+      }
+    }
+  }
+}
