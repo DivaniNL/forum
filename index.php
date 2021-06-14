@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/style.min.css">
-    <title></title>
+    <title>Login - Forum</title>
   </head>
   <body>
     <header>
@@ -18,19 +18,19 @@
       <form method="post">
         <?php
         if(isset($_POST['submit'])){
-          $email = $_POST['email'];
+          $gebruiker = $_POST['gebruiker'];
           $wachtwoord= $_POST['wachtwoord'];
 
-          $sql="select * from gebruikers where email='".$email."'AND wachtwoord='".$wachtwoord."' limit 1";
+          $sql="select * from gebruikers where gebruikersnaam='".$gebruiker."'AND wachtwoord='".$wachtwoord."' limit 1";
 
             session_start();
 
           $result=mysqli_query($conn, $sql);
           if(mysqli_num_rows($result)==1){
-            $_SESSION['login'] = "1";
+            $_SESSION['login'] = $gebruiker;
             header('Location: home.php');
             }else {
-              echo "<div id='verkeerd'>Uw E-mail of Wachtwoord is verkeerd!</div>";
+              echo "<div id='verkeerd'>Uw Gebruikersnaam of Wachtwoord is verkeerd!</div>";
             }
           }
          ?>
@@ -39,8 +39,8 @@
       </div>
       <?php  ?>
           <div class="form-group">
-              <label for="email">E-mailadres</label><br>
-              <input type="email" name="email" class="form-control" id="email" placeholder=" E-mailadres" required />
+              <label for="username">Gebruikersnaam</label><br>
+              <input type="username" name="gebruiker" class="form-control" id="email" placeholder="Gebruikersnaam" required />
           <div class="form-group">
               <label for="passwd">Wachtwoord</label><br>
               <input type="password" name="wachtwoord" class="form-control" id="Wachtwoord" placeholder=" Wachtwoord" required />
