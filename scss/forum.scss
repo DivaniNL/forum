@@ -6,6 +6,7 @@
 body{
   margin: 0;
   padding: 0;
+  background-color: #FBFBFB;
   main{
     h1{
       text-align: center;
@@ -14,6 +15,12 @@ body{
       margin-top: 0px;
     }
     h2{
+      color: $basecolor1;
+      font-size: 30px;
+      text-align: center;
+
+    }
+    h3{
       color: $basecolor2;
       font-size: 30px;
       text-align: center;
@@ -26,6 +33,7 @@ body{
       margin-bottom: 28px;
     }
     .posts{
+      background-color: $basecolor2;
       overflow-y: auto;
       width: 60%;
       height: 75vh;
@@ -35,13 +43,16 @@ body{
       border-radius: 10px;
       margin-right: 1.6%;
       .bericht{
+        background-color: $basecolor1;
         border-radius: 10px;
         width: 95%;
         border: 2px solid black;
         margin-bottom: 2%;
         margin-left: 2.5%;
+        text-decoration: none;
         min-height: 10vh;
         p{
+          color: white;
           padding-left: 15px;
           font-size: 22px;
           margin-top: 5px;
@@ -52,6 +63,16 @@ body{
           font-size: 23px;
         }
         p2{
+          color: white;
+          margin-left: 15px;
+        }
+        p4,a{
+          color: #F12121;
+          text-decoration: none;
+        }
+        p5{
+          color: #54C351;
+          text-decoration: none;
           margin-left: 15px;
         }
         .img{
@@ -65,6 +86,7 @@ body{
       width: 35%;
       height: 75vh;
       border: 2px solid $basecolor1;
+      background-color: $basecolor1;
       border-radius: 10px;
       float: left;
       .put{
@@ -75,9 +97,9 @@ body{
         height: 150px;
       }
       #put2{
-        background-color: $basecolor1;
-        color: white;
-        border: 2px solid $basecolor1;
+        background-color: $basecolor2;
+        color: $basecolor1;
+        border: 2px solid $basecolor2;
         border-radius: 10px;
       }
       #put2:hover{

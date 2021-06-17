@@ -17,7 +17,7 @@ if(!empty($_POST)){
   <body>
     <header>
       <nav>
-        <a href="#" class="logo"><h1>Forum</h1></a>
+        <a href="index.php" class="logo"><h1>Forum</h1></a>
       </nav>
     </header>
     <main>

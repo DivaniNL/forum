@@ -6,7 +6,17 @@
 body{
   margin: 0;
   padding: 0;
+  background-color: #FBFBFB;
   main{
+    header{
+      nav{
+        #onder{
+          h1{
+            font-size: 10px;
+          }
+        }
+      }
+    }
     h2{
       margin: 0;
       padding: 0;
@@ -18,23 +28,30 @@ body{
     #mijn_onderwerpen{
       float: left;
       margin-left: 1.5%;
+      background-color: $basecolor1;
     }
     .mijn_posts{
       width: 50%;
       height: 85vh;
       float: left;
-      border: 2px solid $basecolor1;
+      border: 2px solid $basecolor2;
+      background-color: $basecolor2;
       border-radius: 10px;
       overflow-y: auto;
       margin-left: 1.5%;
       margin-right: 1.5%;
+      h2{
+        color: $basecolor1;
+      }
       .bericht{
+        background-color: $basecolor1;
         border-radius: 10px;
         width: 95%;
-        border: 2px solid black;
+        border: 2px solid $basecolor1;
         margin-bottom: 2%;
         margin-left: 2.5%;
         min-height: 10vh;
+        color: white;
         p{
           padding-left: 15px;
           font-size: 22px;
@@ -47,6 +64,18 @@ body{
         }
         p2{
           margin-left: 15px;
+        }
+        #del{
+          color: #F12121;
+          text-decoration: none;
+        }
+        #bekijk{
+          color: $basecolor2;
+          text-decoration: none;
+        }
+        #update{
+          color: #54C351;
+          text-decoration: none;
         }
         .img{
           width: 15%;
@@ -61,6 +90,10 @@ body{
       }
     }
     #nieuwe_onderwerpen{
+      background-color: $basecolor1;
+      h2{
+        color: $basecolor2;
+      }
     }
     .block{
       width: 22%;
@@ -70,12 +103,12 @@ body{
       overflow-y: auto;
       .onderwerp{
         text-align: center;
-      .text{
+      .text,a{
           text-decoration: none;
           margin-top: 20px;
-          text-decoration: underline;
+          text-decoration: none;
           font-size: 27px;
-          color: $basecolor1;
+          color: white;
           cursor: pointer;
         }
       }
