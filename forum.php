@@ -13,15 +13,19 @@ if(isset($_POST['submit'])){
   $tekst = $_POST['bericht'];
   $gebruiker = $_SESSION['login'];
   $id = $_GET['id'];
-
- $sql = "INSERT INTO berichten (tekst, gebruikersnaam, onderwerp_id) VALUES ('$tekst', '$gebruiker', '$id')";
-
-if (mysqli_query($conn, $sql)) {
-  $product_id = $conn->insert_id;
-
-} else {
-  }
+  echo $tekst;
+  if($tekst !== NULL){
+    $sql = "INSERT INTO berichten (tekst, gebruikersnaam, onderwerp_id) VALUES ('$tekst', '$gebruiker', '$id')";
+    if (mysqli_query($conn, $sql)) {
+      $product_id = $conn->insert_id;
+    } else {
+      header("Location: forum.php");
+    }
+   }
 }
+
+
+
 ?>
  <!DOCTYPE html>
  <html lang="en" dir="ltr">
